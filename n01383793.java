@@ -30,11 +30,11 @@ public class n01383793
 
 			
 		int value = 0; // ??
-		while( inputOne.hasNextLine() )
+		while( inputOne.hasNext() )
 		{
 			
-			String dataString = inputOne.nextLine(); // gets line
-			if(dataString.length() != 0) // if not a blank line
+			String dataString = inputOne.next(); // gets line
+			//if(dataString.length() != 0) // if not a blank line
 				hashedContent.add(dataString);
 		}					
 		
@@ -420,9 +420,8 @@ class QuaHashTable extends HashTable
 			location += stepSize;
 			location %= m_size;
 			
-			stepSize += Math.pow( probLength + 1, 2); // 1 4 9 16 25 ...
+			stepSize =(int) Math.pow( probLength + 1, 2); // 1 4 9 16 25 ...
 		}
-		
 		
 		return new Data( probLength );
 		
